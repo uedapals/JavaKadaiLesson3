@@ -1,14 +1,14 @@
 package jp.techacademy.takuro.ueda.javakadai;
-
-/**
- * Created by ueda_palsbots on 2017/07/17.
+import android.util.Log;
+/*
+ Created by ueda_palsbots on 2017/07/17.
  */
 class Human extends Animal implements Thinkable {
     static String to_jp = "人間";
 //to_jpとは何。これは犬クラスです、はどこへ
+    String hobby;
 
 public Human (String name, int age,String hobby) {
-         public Animal (String name,int age,String hobby)
                 this.name = name;
                 this.age = age;
                 this.hobby = hobby;

@@ -3,15 +3,18 @@ package jp.techacademy.takuro.ueda.javakadai;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends Human implements Thinkable {
-    Human human = new Human("太郎", 25, "散歩");
+//AppCompatActivityはおまじない
+public class MainActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-    human.say();
-        Log.d("javatest","私の名前は" + name + "です。");
-        Log.d("javatest","年は" + age + "歳です。");
+        Human human = new Human("太郎", 25, "散歩");
 
-    human.think();
-        Log.d("javatest","私は" + hobby + "について考える");
+        human.say();
+        human.think();
+    }
 
 }
 //何も継承されていない
